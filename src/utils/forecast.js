@@ -47,7 +47,8 @@ request({ url, json: true}, (error, {body})=>{
         callback( undefined, {
                                 temperature : body.current.temp,
                                 timezone: body.timezone,
-                                weather: body.current.weather[0].description
+                                weather: body.current.weather[0].description,
+                                windSpeed: body.current.wind_speed
                 })
         }
 

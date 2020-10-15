@@ -33,7 +33,7 @@ weatherForm.addEventListener('submit',(e)=>{
         if(data.Error){
         return messageOne.textContent = '' +data.Error
     }
-        messageTwo.textContent = 'Temperature: ' +data.Data.temperature+ ' .. Weather: ' +data.Data.weather+ ' .. Time-zone: ' +data.Data.timezone
+        messageTwo.textContent = 'Temperature: ' +data.Data.temperature+ ' .. Weather: ' +data.Data.weather+ ' .. Time-zone: ' +data.Data.timezone+ ' .. Wind-speed: ' +data.Data.windSpeed 
         messageOne.textContent = 'Location: ' +data.Location
         //console.log(data.Address)
     })
