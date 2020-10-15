@@ -12,6 +12,8 @@ const geocode = require('./utils/geocode')
 
 const app = express()   //we have to call the express function to create a express application and we created a const app variable to store our new express application
 
+const port = process.env.PORT || 3000
+
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
@@ -159,7 +161,7 @@ app.get('*', (req, res)=>{
 // })
 // })
 
-app.listen(3000, ()=>{                        //this method is to start the server, arguments are (Port number, callback function)
-    console.log('Server is up on port 3000')    //not displayable to user, only for confirm that server is running successfully
+app.listen(port, ()=>{                        //this method is to start the server, arguments are (Port number, callback function)
+    console.log('Server is up on port ' +port)    //not displayable to user, only for confirm that server is running successfully
 })
 
